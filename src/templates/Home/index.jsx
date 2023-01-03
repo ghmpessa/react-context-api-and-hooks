@@ -2,10 +2,10 @@ import { useCounterContext } from '../../contexts/CounterContext'
 import './styles.css'
 
 export const Home = () => {
-  const [state, dispatch] = useCounterContext()
+  const [state, actions] = useCounterContext()
   return (
     <div>
-      <h1>oi</h1>
+      <h1 onClick={() => actions.increase()}>oi</h1>
     </div>
   )
 }
